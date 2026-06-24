@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="18" fill="#fff0f6"/>
+  <circle cx="100" cy="80" r="40" fill="#c9b6ff"/>
+  <text x="100" y="120" text-anchor="middle" font-family="Poppins, sans-serif" font-size="16" fill="#342b38">Cerâmica</text>
+</svg>
