@@ -478,14 +478,14 @@ a {
 
 .carousel-card img {
   width: clamp(112px, 13vw, 170px);
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: 28px;
   border: 1px solid rgba(120, 174, 238, 0.18);
   box-shadow:
     0 18px 36px rgba(55, 72, 92, 0.16),
     inset 0 1px 0 rgba(255, 255, 255, 0.7);
-  background: #ffffff;
+  background: transparent;
 }
 
 .carousel-card span {
@@ -521,6 +521,7 @@ a {
 
 .carousel-card-center img {
   width: clamp(150px, 19vw, 250px);
+  height: auto;
   box-shadow:
     0 24px 48px rgba(55, 72, 92, 0.2),
     0 0 0 1px rgba(120, 174, 238, 0.18);
@@ -537,6 +538,7 @@ a {
 .carousel-card-left img,
 .carousel-card-right img {
   width: clamp(112px, 13vw, 170px);
+  height: auto;
 }
 
 .carousel-card-far-left {
