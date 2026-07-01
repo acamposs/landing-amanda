@@ -375,40 +375,6 @@ a {
   margin-bottom: 20px;
 }
 
-.skills-category {
-  margin-bottom: 18px;
-}
-
-.skills-category h3 {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: var(--text);
-  margin: 0 0 8px 0;
-  padding: 0;
-}
-
-.skill-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-
-.skill-pills span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 32px;
-  padding: 0 14px;
-  border: 1px solid rgba(120, 174, 238, 0.22);
-  background: rgba(158, 203, 255, 0.14);
-  color: var(--text);
-  font-size: 0.88rem;
-  font-weight: 700;
-  border-radius: var(--radius-pill);
-  white-space: nowrap;
-}
-
 .pill-row span,
 .cta-pill,
 .stage-cta {
@@ -903,8 +869,8 @@ a {
 }
 
 /* Afastar os grupos de Links/Contatos da borda do card */
-.footer-columns > div {
-  padding-left: 18px;
+.footer-columns>div {
+  padding-left: 50px;
 }
 
 .footer-bottom {
@@ -958,25 +924,25 @@ a {
 }
 
 /* Centralizar o bloco de lista dentro do footer também em desktop */
-.footer-bottom > div {
+.footer-bottom>div {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.footer-bottom > div ul {
+.footer-bottom>div ul {
   display: inline-block;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.footer-bottom > div ul li {
+.footer-bottom>div ul li {
   margin: 6px 0;
 }
 
 /* Copyright: centralizar e destacar */
-footer.contact > p {
+footer.contact>p {
   text-align: center;
   font-weight: 800;
   margin: 12px 0 0;
@@ -1287,14 +1253,14 @@ footer.contact > p {
   }
 
   /* Centraliza o bloco de lista dentro do footer e mantém os itens empilhados */
-  .footer-bottom > div ul {
+  .footer-bottom>div ul {
     display: inline-block;
     margin: 0 auto;
     padding: 0;
     text-align: left;
   }
 
-  .footer-bottom > div ul li {
+  .footer-bottom>div ul li {
     margin: 6px 0;
   }
 
