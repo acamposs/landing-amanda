@@ -1069,6 +1069,20 @@ a {
     padding-top: 0;
   }
 
+  /* Centralizar projetos e garantir margem automática */
+  .feature-carousel {
+    justify-content: center;
+    padding-inline: 12px;
+  }
+
+  .carousel-card {
+    margin: 0 auto;
+  }
+
+  .carousel-card-center {
+    margin: 0 auto;
+  }
+
   .carousel-card {
     width: min(100%, 320px);
   }
@@ -1136,8 +1150,43 @@ a {
     padding: 14px;
   }
 
+  /* Ajuste da assinatura (nome) para mobile: legível e não sobrepor conteúdo */
   .signature {
-    font-size: clamp(2.6rem, 15vw, 4rem);
-    margin-top: -8px;
+    font-size: clamp(1.6rem, 8vw, 2.6rem);
+    transform: none;
+    opacity: 0.12;
+    margin: 10px auto 0;
+    display: block;
+    text-align: center;
+    -webkit-text-stroke: 0.4px #ffffff;
+  }
+
+  /* Remover imagens das experiências e manter apenas o conteúdo do card */
+  .project-media {
+    display: none;
+  }
+
+  .project-copy {
+    border: 1px solid var(--border-soft);
+    border-radius: 18px;
+    padding: 16px;
+  }
+
+  /* Rodapé: colocar Links e Contatos lado a lado; Juridico + autoria centralizados abaixo */
+  .footer-columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .footer-bottom p {
+    justify-self: center;
+    text-align: center;
   }
 }
