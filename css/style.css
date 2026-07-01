@@ -168,6 +168,16 @@ a {
   white-space: nowrap;
 }
 
+/* Ajuste de tamanho para ícones nas barras de links */
+.social-links img,
+.top-links img {
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px !important;
+  display: block;
+  object-fit: contain;
+}
+
 .top-links a:hover,
 .top-links a.is-active,
 .social-links a:hover {
@@ -263,16 +273,18 @@ a {
 
 .hero-link-row {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 16px;
   min-height: 37px;
   padding: 0 10px 0 0;
   border-bottom: 1px solid rgba(120, 174, 238, 0.18);
   color: var(--text);
+  width: 100%;
 }
 
 .hero-link-row span {
+  min-width: 0;
   font-size: 1.06rem;
   font-weight: 750;
   letter-spacing: -0.01em;
@@ -282,17 +294,18 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  max-width: min(100%, 290px);
+  justify-self: end;
+  max-width: 100%;
   min-width: 86px;
-  padding: 8px 16px;
+  padding: 8px 12px;
   background: rgba(158, 203, 255, 0.18);
   color: var(--text);
   border: 1px solid rgba(120, 174, 238, 0.22);
   border-radius: 0;
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 800;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: visible;
+  text-overflow: clip;
   white-space: nowrap;
 }
 
@@ -1078,5 +1091,53 @@ a {
 
   .carousel-card-center {
     order: -1;
+  }
+
+  /* Mobile-specific tweaks: espaçamento, tamanhos e alvos de toque */
+  .topbar-inner {
+    padding: 8px 0;
+    gap: 10px;
+  }
+
+  .top-links a {
+    min-height: 44px;
+    padding: 0 10px;
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    gap: 6px;
+    padding: 4px;
+  }
+
+  .social-links a {
+    min-height: 44px;
+    padding: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-links img {
+    width: 18px !important;
+    height: 18px !important;
+    max-width: 18px !important;
+  }
+
+  .hero-photo {
+    min-height: 260px;
+  }
+
+  .hero-photo img {
+    object-position: center top;
+  }
+
+  .hero-copy {
+    padding: 14px;
+  }
+
+  .signature {
+    font-size: clamp(2.6rem, 15vw, 4rem);
+    margin-top: -8px;
   }
 }
