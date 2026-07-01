@@ -1083,6 +1083,31 @@ a {
     margin: 0 auto;
   }
 
+  /* Forçar centralização das imagens dentro dos cards no mobile */
+  .feature-carousel .carousel-card {
+    width: 100% !important;
+    max-width: 320px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    padding-inline: 0 !important;
+  }
+
+  .feature-carousel .carousel-card img {
+    margin: 0 auto !important;
+    display: block !important;
+    width: auto !important;
+    max-width: 88% !important;
+    height: auto !important;
+  }
+
+  .feature-carousel .carousel-card span {
+    display: block;
+    text-align: center;
+    margin: 8px auto 0;
+  }
+
   .carousel-card {
     width: min(100%, 320px);
   }
@@ -1188,5 +1213,45 @@ a {
   .footer-bottom p {
     justify-self: center;
     text-align: center;
+  }
+
+  /* Remover título 'Jurídico' caso exista e simplificar rodapé no mobile */
+  .footer-bottom h4,
+  .footer-info h4[aria-hidden] {
+    display: none !important;
+  }
+
+  /* Centralizar o brand no rodapé */
+  .footer-brand {
+    margin: 0 auto 12px !important;
+    display: block;
+    text-align: center;
+  }
+
+  /* Topbar: marca à esquerda, menu central, ícones à direita (mobile) */
+  .topbar-inner {
+    grid-template-columns: auto 1fr auto !important;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 6px;
+  }
+
+  .brand-pill {
+    justify-self: start;
+  }
+
+  .top-links {
+    justify-self: center;
+    display: flex;
+    gap: 8px;
+  }
+
+  .social-links {
+    justify-self: end;
+  }
+
+  /* Remover a assinatura grande/decorativa que sobrepõe no mobile */
+  .signature {
+    display: none !important;
   }
 }
