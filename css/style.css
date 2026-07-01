@@ -995,18 +995,23 @@ footer.contact>p {
 
 @media (max-width: 960px) {
   .topbar-inner {
-    grid-template-columns: 1fr;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
     padding: 10px 0;
+    align-items: center;
+    grid-template-areas:
+      "brand social"
+      "links links";
   }
 
   .brand-pill {
-    display: flex;
-    gap: 6px;
+    grid-area: brand;
+    justify-self: start;
   }
 
   .top-links {
-    grid-column: 1;
+    grid-area: links;
     justify-self: center;
     gap: 12px;
   }
@@ -1017,14 +1022,14 @@ footer.contact>p {
   }
 
   .social-links {
-    grid-column: 1;
-    justify-self: center;
-    gap: 8px;
+    grid-area: social;
+    justify-self: end;
+    gap: 6px;
   }
 
   .social-links a {
-    min-height: 40px;
-    padding: 6px;
+    min-height: 36px;
+    padding: 4px;
   }
 
   .social-links img {
@@ -1242,6 +1247,7 @@ footer.contact>p {
     transform: none;
     width: fit-content;
     margin: 20px auto 0;
+    display: block;
   }
 
   .topbar-inner {
