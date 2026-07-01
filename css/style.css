@@ -919,7 +919,7 @@ a {
   gap: 22px;
 }
 
-.footer-columns > div {
+.footer-columns>div {
   padding-left: 18px;
 }
 
@@ -969,24 +969,24 @@ a {
   color: var(--lilac-strong);
 }
 
-.footer-bottom > div {
+.footer-bottom>div {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.footer-bottom > div ul {
+.footer-bottom>div ul {
   display: inline-block;
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.footer-bottom > div ul li {
+.footer-bottom>div ul li {
   margin: 6px 0;
 }
 
-footer.contact > p {
+footer.contact>p {
   text-align: center;
   font-weight: 800;
   margin: 12px 0 0;
@@ -1244,7 +1244,7 @@ footer.contact > p {
     margin: 20px auto 0;
   }
 
-    .topbar-inner {
+  .topbar-inner {
     padding: 8px 0;
     gap: 10px;
   }
@@ -1286,7 +1286,7 @@ footer.contact > p {
     padding: 14px;
   }
 
-    .signature {
+  .signature {
     font-size: clamp(1.6rem, 8vw, 2.6rem);
     transform: none;
     opacity: 0.12;
@@ -1296,7 +1296,7 @@ footer.contact > p {
     -webkit-text-stroke: 0.4px #ffffff;
   }
 
-    .project-media {
+  .project-media {
     display: none;
   }
 
@@ -1323,14 +1323,14 @@ footer.contact > p {
     text-align: center;
   }
 
-  .footer-bottom > div ul {
+  .footer-bottom>div ul {
     display: inline-block;
     margin: 0 auto;
     padding: 0;
     text-align: left;
   }
 
-  .footer-bottom > div ul li {
+  .footer-bottom>div ul li {
     margin: 6px 0;
   }
 
