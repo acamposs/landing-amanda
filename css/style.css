@@ -121,6 +121,16 @@ a {
   border-radius: var(--radius-pill);
 }
 
+/* Ícones */
+.social-links img,
+.top-links img {
+  width: 20px !important;
+  height: 20px !important;
+  max-width: 20px !important;
+  display: block;
+  object-fit: contain;
+}
+
 .brand-pill {
   display: inline-flex;
   align-items: center;
@@ -168,7 +178,6 @@ a {
   white-space: nowrap;
 }
 
-/* Ajuste de tamanho para ícones nas barras de links */
 .social-links img,
 .top-links img {
   width: 20px !important;
@@ -368,10 +377,14 @@ a {
   border-left: 2px dashed rgba(120, 174, 238, 0.55);
 }
 
-.pill-row {
+.pill-row,
+.skill-pills {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+.pill-row {
   margin-bottom: 20px;
 }
 
@@ -388,28 +401,34 @@ a {
 }
 
 .skill-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
   margin-bottom: 12px;
 }
 
-.skill-pills span {
+/* Pills */
+.skill-pills span,
+.pill-row span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 32px;
   padding: 0 14px;
   border: 1px solid rgba(120, 174, 238, 0.22);
   background: rgba(158, 203, 255, 0.14);
   color: var(--text);
-  font-size: 0.88rem;
   font-weight: 700;
   border-radius: var(--radius-pill);
   white-space: nowrap;
 }
 
-.pill-row span,
+.skill-pills span {
+  min-height: 32px;
+  font-size: 0.88rem;
+}
+
+.pill-row span {
+  min-height: 34px;
+  font-size: 0.9rem;
+}
+
 .cta-pill,
 .stage-cta {
   display: inline-flex;
@@ -420,8 +439,8 @@ a {
   border: 1px solid rgba(120, 174, 238, 0.22);
   background: rgba(158, 203, 255, 0.14);
   color: var(--text);
-  font-size: 0.9rem;
   font-weight: 700;
+  border-radius: var(--radius-pill);
 }
 
 .about-right p {
@@ -433,14 +452,24 @@ a {
 }
 
 .cta-pill {
-  display: flex;
   width: fit-content;
   margin-top: 24px;
   align-self: center;
   border: 1px solid rgba(120, 174, 238, 0.38);
   background: linear-gradient(180deg, #ffffff, #f4f9ff);
-  color: var(--text);
   box-shadow: 0 14px 30px rgba(120, 174, 238, 0.2);
+}
+
+.stage-cta {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  z-index: 2;
+  transform: translateX(-50%);
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(120, 174, 238, 0.22);
+  box-shadow: 0 12px 24px rgba(55, 72, 92, 0.14);
 }
 
 .feature-stage {
@@ -628,19 +657,6 @@ a {
   height: 1px;
   transform: translateX(-50%);
   background: linear-gradient(90deg, transparent, rgba(120, 174, 238, 0.48), transparent);
-}
-
-.stage-cta {
-  position: absolute;
-  left: 50%;
-  bottom: 16px;
-  z-index: 2;
-  transform: translateX(-50%);
-  width: fit-content;
-  background: rgba(255, 255, 255, 0.94);
-  color: var(--text);
-  border-color: rgba(120, 174, 238, 0.22);
-  box-shadow: 0 12px 24px rgba(55, 72, 92, 0.14);
 }
 
 .projects {
@@ -896,23 +912,23 @@ a {
   width: fit-content;
 }
 
+/* Footer */
 .footer-columns {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
 }
 
-/* Afastar os grupos de Links/Contatos da borda do card */
 .footer-columns > div {
   padding-left: 18px;
 }
 
 .footer-bottom {
-  /* layout centralizado por padrão */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  margin-top: 18px;
 }
 
 .footer-columns h4,
@@ -943,10 +959,6 @@ a {
   gap: 2px;
 }
 
-.footer-bottom {
-  margin-top: 18px;
-}
-
 .footer-bottom p {
   text-align: center;
   margin: 0;
@@ -957,7 +969,6 @@ a {
   color: var(--lilac-strong);
 }
 
-/* Centralizar o bloco de lista dentro do footer também em desktop */
 .footer-bottom > div {
   display: flex;
   justify-content: center;
@@ -975,7 +986,6 @@ a {
   margin: 6px 0;
 }
 
-/* Copyright: centralizar e destacar */
 footer.contact > p {
   text-align: center;
   font-weight: 800;
@@ -986,14 +996,40 @@ footer.contact > p {
 @media (max-width: 960px) {
   .topbar-inner {
     grid-template-columns: 1fr;
-    justify-items: start;
-    padding: 12px 0;
+    gap: 8px;
+    padding: 10px 0;
   }
 
-  .top-links,
+  .brand-pill {
+    display: flex;
+    gap: 6px;
+  }
+
+  .top-links {
+    grid-column: 1;
+    justify-self: center;
+    gap: 12px;
+  }
+
+  .top-links a {
+    padding: 0 10px;
+    font-size: 0.85rem;
+  }
+
   .social-links {
-    justify-self: start;
-    flex-wrap: wrap;
+    grid-column: 1;
+    justify-self: center;
+    gap: 8px;
+  }
+
+  .social-links a {
+    min-height: 40px;
+    padding: 6px;
+  }
+
+  .social-links img {
+    width: 18px !important;
+    height: 18px !important;
   }
 
   .hero-grid,
@@ -1133,54 +1169,48 @@ footer.contact > p {
   }
 
   .feature-carousel {
-    min-height: 320px;
+    min-height: 420px;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
-    padding-top: 0;
-  }
-
-  /* Centralizar projetos e garantir margem automática */
-  .feature-carousel {
-    justify-content: center;
-    padding-inline: 12px;
+    gap: 0;
+    padding: 0 12px 60px;
+    justify-content: flex-start;
+    overflow-x: hidden;
   }
 
   .carousel-card {
-    margin: 0 auto;
-  }
-
-  .carousel-card-center {
-    margin: 0 auto;
-  }
-
-  /* Forçar centralização das imagens dentro dos cards no mobile */
-  .feature-carousel .carousel-card {
-    width: 100% !important;
-    max-width: 320px !important;
+    width: 100%;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
     display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin: 0 auto !important;
-    padding-inline: 0 !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    order: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    z-index: 1 !important;
   }
 
-  .feature-carousel .carousel-card img {
-    margin: 0 auto !important;
-    display: block !important;
-    width: auto !important;
-    max-width: 88% !important;
+  .carousel-card:nth-child(n+2) {
+    display: none !important;
+  }
+
+  .carousel-card img {
+    width: 100% !important;
+    max-width: 260px !important;
     height: auto !important;
+    margin: 0 auto 12px !important;
+    display: block !important;
   }
 
-  .feature-carousel .carousel-card span {
+  .carousel-card span {
     display: block;
     text-align: center;
-    margin: 8px auto 0;
-  }
-
-  .carousel-card {
-    width: min(100%, 320px);
+    margin: 0;
+    font-size: 0.95rem;
   }
 
   .carousel-card-left,
@@ -1188,23 +1218,33 @@ footer.contact > p {
   .carousel-card-right,
   .carousel-card-far-left,
   .carousel-card-far-right {
-    transform: none;
+    order: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
     margin-inline: 0;
-  }
-
-  .carousel-card-left,
-  .carousel-card-right,
-  .carousel-card-far-left,
-  .carousel-card-far-right {
     display: none;
   }
 
   .carousel-card-center {
-    order: -1;
+    display: flex !important;
   }
 
-  /* Mobile-specific tweaks: espaçamento, tamanhos e alvos de toque */
-  .topbar-inner {
+  .carousel-card-center img {
+    width: 100% !important;
+    max-width: 260px !important;
+  }
+
+  .stage-cta {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    width: fit-content;
+    margin: 20px auto 0;
+  }
+
+    .topbar-inner {
     padding: 8px 0;
     gap: 10px;
   }
@@ -1246,8 +1286,7 @@ footer.contact > p {
     padding: 14px;
   }
 
-  /* Ajuste da assinatura (nome) para mobile: legível e não sobrepor conteúdo */
-  .signature {
+    .signature {
     font-size: clamp(1.6rem, 8vw, 2.6rem);
     transform: none;
     opacity: 0.12;
@@ -1257,8 +1296,7 @@ footer.contact > p {
     -webkit-text-stroke: 0.4px #ffffff;
   }
 
-  /* Remover imagens das experiências e manter apenas o conteúdo do card */
-  .project-media {
+    .project-media {
     display: none;
   }
 
@@ -1268,7 +1306,6 @@ footer.contact > p {
     padding: 16px;
   }
 
-  /* Rodapé: colocar Links e Contatos lado a lado; Juridico + autoria centralizados abaixo */
   .footer-columns {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
@@ -1286,7 +1323,6 @@ footer.contact > p {
     text-align: center;
   }
 
-  /* Centraliza o bloco de lista dentro do footer e mantém os itens empilhados */
   .footer-bottom > div ul {
     display: inline-block;
     margin: 0 auto;
@@ -1298,20 +1334,17 @@ footer.contact > p {
     margin: 6px 0;
   }
 
-  /* Remover título 'Jurídico' caso exista e simplificar rodapé no mobile */
   .footer-bottom h4,
   .footer-info h4[aria-hidden] {
     display: none !important;
   }
 
-  /* Centralizar o brand no rodapé */
   .footer-brand {
     margin: 0 auto 12px !important;
     display: block;
     text-align: center;
   }
 
-  /* Topbar: marca à esquerda, menu central, ícones à direita (mobile) */
   .topbar-inner {
     grid-template-columns: auto 1fr auto !important;
     align-items: center;
@@ -1333,8 +1366,8 @@ footer.contact > p {
     justify-self: end;
   }
 
-  /* Remover a assinatura grande/decorativa que sobrepõe no mobile */
   .signature {
     display: none !important;
   }
+}
 }
